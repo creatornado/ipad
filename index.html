@@ -6,15 +6,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>App Installer</title>
+    <meta name="apple-mobile-web-app-title" content="AppInstaller" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icon-large.jpg">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icon-large.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icon-large.jpg">
+    <script>
+      <script type="text/javascript">
+            $(document).ready(function(){
+                    // iOS web app full screen hacks.
+                    if(window.navigator.standalone == true) {
+                            // make all link remain in web app mode.
+                            $('a').click(function() {
+                                    window.location = $(this).attr('href');
+                        return false;
+                            });
+                    }
+            });
+    </script>
   </head>
   <body>
       
-      <div class="container">
+      <div class="">
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand title" href="index.html">
             <img src="img/icon-large.jpg" width="30" height="30" class="d-inline-block align-top icon" alt="">
             AppInstaller
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://google.com/">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                </ul>
+              </div>
         </nav>
       </div>
       

@@ -1,7 +1,9 @@
 .icon {
     border-radius: 25%;
 }
-
-.navbar, .navbar-light, .bg-light {
-    background-color: white;
+.title {
+    font-weight: 600;
+}
+.nav-link {
+    text-align: center;
 }
